@@ -16,6 +16,7 @@ export class ShowVehiculesComponent implements OnInit{
 
   constructor(private vehiculeService: VehiculeService , private route: ActivatedRoute ){}
 
+  
   ngOnInit(): void {
 
     this.id = Number(this.route.snapshot.params['id']);

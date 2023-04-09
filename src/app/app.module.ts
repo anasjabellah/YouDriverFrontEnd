@@ -5,11 +5,16 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OffresModule } from './offres/offres.module';
+import { ReservationModule } from './reservation/reservation.module';
+import { RolesModule } from './roles/roles.module';
+import { UtilisateurModule } from './utilisateur/utilisateur.module';
 import { VehiculesModule } from './vehicules/vehicules.module';
+import { HomeComponent } from './home/components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,7 +22,9 @@ import { VehiculesModule } from './vehicules/vehicules.module';
     OffresModule,
     VehiculesModule,
     RouterOutlet,
-    RouterModule
+    RolesModule,
+    UtilisateurModule,
+    ReservationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

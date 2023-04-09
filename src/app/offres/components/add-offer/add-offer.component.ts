@@ -23,6 +23,7 @@ export class AddOfferComponent implements OnInit {
   dataVehicules:  any ;
   dataOneVehicule: any ;
   data: any ;
+  id!: number ;
 
   constructor(private offerService: OfferService, private router: Router , private route: ActivatedRoute) { }
 
@@ -43,12 +44,10 @@ export class AddOfferComponent implements OnInit {
           this.vehicules =  dataVehicules;
         }
       )
-
-      console.log(this.vehicules)
   };
 
-  submit(){
 
+  changeVehicule() {
     this.idvehi = this.form.value.vehiculeId ;
     this.offerService.getOneVehicule(this.idvehi).subscribe(
       dataOneVehicule  => {
@@ -61,6 +60,9 @@ export class AddOfferComponent implements OnInit {
           }
         }
       );
+  }
+
+  submit(){
 
     this.data = {
       adresseArivee: this.form.value.adresseArivee , 
@@ -74,7 +76,7 @@ export class AddOfferComponent implements OnInit {
 
 
     console.log(this.data);
-    this.offerService.save(this.data).subscribe( data => { this.router.navigate(['/offer']); } )
+    this.offerService.sava(this.data).subscribe( data => { this.router.navigate(['/offer']); } )
 
   }
 

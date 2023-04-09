@@ -32,8 +32,8 @@ export class OfferService {
     return this.http.get(this.Offer_API + "vehicule/"+ id );
   }
 
-  save(offer: Offer){
-    return this.http.post<Offer>( this.Offer_API + "1/offer/save" , offer);
+  sava(offer: Offer){
+    return this.http.post<Offer>(this.Offer_API + "1/offer/save" , offer);
   }
   
 
