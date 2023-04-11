@@ -10,6 +10,7 @@ import { RolesModule } from './roles/roles.module';
 import { UtilisateurModule } from './utilisateur/utilisateur.module';
 import { VehiculesModule } from './vehicules/vehicules.module';
 import { HomeComponent } from './home/components/home/home.component';
+import { DashboardUserModule } from './dashboardUser/dashboard-user.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/components/home/home.component';
     RouterOutlet,
     RolesModule,
     UtilisateurModule,
-    ReservationModule
+    ReservationModule,
+    DashboardUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,11 @@ import { ListReservationComponent } from './reservation/components/list-reservat
 import { ShowReservationComponent } from './reservation/components/show-reservation/show-reservation.component';
 import { HomeComponent } from './home/components/home/home.component';
 import { ListOfferReservationComponent } from './reservation/components/list-offer-reservation/list-offer-reservation.component';
+import { ContainerUserComponent } from './dashboardUser/components/container-user/container-user.component';
+import { ListOfferUserComponent } from './dashboardUser/components/list-offer-user/list-offer-user.component';
+import { ListReservationUserComponent } from './dashboardUser/components/list-reservation-user/list-reservation-user.component';
+import { ShowOfferUserComponent } from './dashboardUser/components/show-offer-user/show-offer-user.component';
+import { ShowReservationUserComponent } from './dashboardUser/components/show-reservation-user/show-reservation-user.component';
 
 
 const routes: Routes = [
@@ -78,6 +83,16 @@ const routes: Routes = [
     ]
   },
 
+  {
+    path: 'dashboard' , component: ContainerUserComponent ,
+    children:[
+      {path: 'offer' , component: ListOfferUserComponent},
+      {path: 'offer/show/:id' , component: ShowOfferUserComponent},
+      {path: 'reservation' , component: ListReservationUserComponent},
+      {path: 'reservation/show/:id' , component: ShowReservationUserComponent},
+    ]
+  },
+  
   {  path: 'home' , component: HomeComponent   }
 
 ];

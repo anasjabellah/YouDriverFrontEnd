@@ -23,11 +23,16 @@ export class ReservationService {
   }
 
   sava(utilisateur: utilisateur){
-    return this.http.post<utilisateur>(this.Reservations_API + "compagnie/reservation/add" , utilisateur);
+    return this.http.post<utilisateur>(this.Reservations_API + "reservation/add" , utilisateur);
   }
-
+  
   getAllByOffer(id: number){
     return this.http.get(this.Reservations_API + "offer/"+ id +"/reservations");
   }
+
+  getAllByUser(id: number){
+    return this.http.get(this.API + "/Utilisateur/1/reservations");
+  }
+
 
 }
